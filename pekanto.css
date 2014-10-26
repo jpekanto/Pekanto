@@ -42,6 +42,7 @@ html, body {
 }
 
 .chatroom {
+  display: none;
   position: relative;
   top: -18.5em;
   left: 15em;

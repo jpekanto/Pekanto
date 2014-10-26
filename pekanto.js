@@ -5,6 +5,8 @@ $(document).ready(function() {
 	var PostModel = Parse.Object.extend("PostModel"),
 		query = new Parse.Query(PostModel);
 
+	query.limit(10);
+	query.descending("time");
 	query.find({
 		success: function (posts) {
 			for (var i=0; i<posts.length; i++) {
@@ -20,7 +22,8 @@ $(document).ready(function() {
 	})
 
 	$('#navicon').click(function() {
-	  $('.menu').toggle("slide");
+	  	  	$('.menu').toggle("slide");
+			$('.chatroom').slideToggle();
 	});
 
 	var disablePost = function() {$('.button').addClass('disabled');},
