@@ -1,0 +1,77 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url("background_pic.jpeg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden; 
+}
+
+.menu {
+  display: none;
+  position: relative;
+  background-color: #CE7047;
+  opacity: 0.7;
+  border-radius: 10%;
+  width: 11em;
+  height: 15.5em;
+  left: -1em;
+  top: -3em;
+}
+
+.menu-sidebar {
+  position: relative;
+  display: inline-block;
+  font-family: Helvetica;
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 1.7em;
+  list-style: none;
+  opacity: 1;
+}
+
+#navicon {
+  display: inline-block;
+  position: relative;
+  left: 1em;
+  top: -1em;
+  cursor: pointer;
+  font-family: Helvetica;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.chatroom {
+  position: relative;
+  top: -18.5em;
+  left: 15em;
+}
+
+.chatbox {
+  width: 50%;
+  opacity: 0.6;
+  color: #9D2206;
+}
+
+.post-item {
+  border: 1px solid #6a6a6a;
+  background-color: #fff;
+  opacity: 0.7;
+  font-family: Helvetica;
+  font-size: 0.75em;
+  padding: 0.5em;
+  color: #9D2206;
+  width: 47.3%;
+  list-style: none;
+  cursor: pointer;
+}
+
+.active-post {
+  background-color: #9D2206;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.button {
+  display: inline;
+}
