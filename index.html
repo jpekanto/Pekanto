@@ -2,8 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Pekanto Family</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="pekanto.css" type="text/css">
 </head>
 <body>
@@ -20,34 +21,41 @@
       <li>Jessica</li>
     </ul>
   </div>
-  
-  <div class="chatroom">
-    <form>
-      <textarea class="chatbox" rows="3" placeholder="What do you want to say?"></textarea>
-    </form>
 
-    <select class="name">
-      <option value="">-Select-</option>
-      <option value="harry">Papi</option>
-      <option value="muljani">Mami</option>
-      <option value="fransisca">Sisca</option>
-      <option value="andrew">Godeg</option>
-      <option value="jessica">Koboi</option>
-    </select>
-    
-    <div class="button">
-      <button>POST</button>
-    </div>
-    
-    <ul class="posts">
-    </ul>
-    
-    <div class="delete">
-      <button>DELETE</button>
+  <div class="container">
+    <div class="row">
+  
+      <div class="col-md-8-offset-3">
+        <div class="chatroom">
+          <form>
+            <textarea class="chatbox" rows="3" placeholder="What do you want to say?"></textarea>
+          </form>
+
+          <select class="name">
+            <option value="">-Select-</option>
+            <option value="papi">Harry</option>
+            <option value="mami">Muljani</option>
+            <option value="cici">Fransisca</option>
+            <option value="godeg">Andrew</option>
+            <option value="koboi">Jessica</option>
+          </select>
+          
+          <div class="button">
+            <button>POST</button>
+          </div>
+          
+          <ul class="posts">
+          </ul>
+          
+          <div class="delete">
+            <button>DELETE</button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   
-
   <script src="jquery-2.1.1.min.js"></script>
   <script src="http://www.parsecdn.com/js/parse-1.3.1.min.js"></script>
   <script src="bootstrap.min.js"></script>
