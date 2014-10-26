@@ -41,12 +41,9 @@ $(document).ready(function() {
 			postData.set("text", post);
 			postData.set("name", poster);
 			postData.set("time", date);
-			postData.save({
-				success: function(postData) {
-					$li.data("parseObject", postData);
-				}
-			});
+			postData.save();
 
+			$li.data("parseObject", postData);
 	  		$('.chatbox').val('');
 	  		disablePost();
 	  	}
@@ -56,7 +53,7 @@ $(document).ready(function() {
 	  $(this).toggleClass('active-post');
 	});
 
-	$('.delete').click(function() {
+	$('.delete button').click(function() {
 		$('.active-post').each(function() {
 			var postData = $(this).data("parseObject");
 			postData.destroy();
