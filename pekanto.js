@@ -5,7 +5,6 @@ $(document).ready(function() {
 	var PostModel = Parse.Object.extend("PostModel"),
 		query = new Parse.Query(PostModel);
 
-	query.limit(10);
 	query.descending("time");
 	query.find({
 		success: function (posts) {
