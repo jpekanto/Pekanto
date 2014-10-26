@@ -9,7 +9,7 @@ $(document).ready(function() {
 	query.descending("time");
 	query.find({
 		success: function (posts) {
-			for (var i=0; i<posts.length; i++) {
+			for (var i=posts.length; i>0; i--) {
 				var post = posts[i],
 					text = post.get("text"),
 					name = post.get("name");
