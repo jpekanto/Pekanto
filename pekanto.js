@@ -20,7 +20,8 @@ $(document).ready(function() {
 		}
 	})
 
-	$('#navicon').click(function() {
+	$('#navicon a').click(function(e) {
+			e.preventDefault();
 	  	  	$('.menu').toggle("slide");
 			$('.chatroom').slideToggle();
 	});
