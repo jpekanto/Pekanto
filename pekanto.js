@@ -20,7 +20,7 @@ $(document).ready(function() {
 		}
 	})
 
-	$('#navicon a').click(function(e) {
+	$('#navicon').on("click", "a", function(e) {
 			e.preventDefault();
 	  	  	$('.menu').toggle("slide");
 			$('.chatroom').slideToggle();
