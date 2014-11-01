@@ -1,26 +1,21 @@
 html, body {
   width: 100%;
   height: 100%;
-  position: relative;
   background: url("background_pic.jpeg") no-repeat center center;
   background-size: cover;
   overflow: auto; 
 }
 
-.menu {
+#menu {
   display: none;
-  position: relative;
   background-color: #CE7047;
   opacity: 0.7;
-  border-radius: 10%;
+  border-radius: 0 10% 10% 0;
   width: 11em;
   height: 15.5em;
-  left: -1em;
-  /*top: -3em;*/
 }
 
 .menu-sidebar {
-  position: relative;
   display: inline-block;
   font-family: Helvetica;
   color: #fff;
@@ -28,10 +23,16 @@ html, body {
   line-height: 1.7em;
   list-style: none;
   opacity: 1;
-  top: 1em;
+  padding-top: 1em;
+  padding-left: 0.8em;
 }
 
-a {
+.menu-sidebar li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#navicon a {
   color: #fff;
   text-decoration: none;
   font-size: 1.5em;
@@ -39,46 +40,38 @@ a {
   top: 0.3em;
 }
 
-a:hover {
+#navicon a:hover {
   text-decoration: none;
   color: #fff;
 }
 
 #navicon {
   display: inline-block;
-  position: relative;
-  left: 1em;
-  top: -0.4em;
   cursor: pointer;
   font-family: Helvetica;
   color: #fff;
-  font-size: 1.5em;
+  font-size: 2em;
   margin-bottom: 1em;
-  margin-top: 0.5em;
+  margin-left: 1em;
 }
 
-.chatroom {
+#chatroom {
   display: none;
-  position: relative;
-  top: -15em;
-  left: 8em;
 }
 
-form {
-  width: 100%;
-}
-
-button {
-  border-radius: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+.btn {
+  border-radius: 5px;
+  font-family: Helvetica;
+  font-size: 0.8em;
 }
 
 textarea {
   border-radius: 5px;
+  border: 1.5px solid #CE7047;
 }
 
-.chatbox {
-  width: 50%;
+#chatbox {
+  width: 100%;
   opacity: 0.6;
   color: #9D2206;
 }
@@ -88,24 +81,27 @@ textarea {
   background-color: #fff;
   opacity: 0.7;
   font-family: Helvetica;
-  font-size: 0.75em;
+  font-size: 0.9em;
   padding: 0.5em;
   color: #9D2206;
-  list-style: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-.posts {
-  width: 47.3%;
+strong {
+  font-size: 0.8em;
+  color: #5A5F00;
+}
+
+#posts {
+  width: 100%;
   margin-top: 2em;
+  list-style: none;
+  padding-left: 0;
 }
 
 .active-post {
   background-color: #9D2206;
   color: #fff;
   opacity: 0.6;
-}
-
-.button {
-  display: inline;
 }
