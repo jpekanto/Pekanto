@@ -6,19 +6,23 @@ $(document).ready(function() {
 		query = new Parse.Query(PostModel);
 
 	query.descending("time");
-	query.find({
-		success: function (posts) {
-			for (var i=posts.length-1; i>=0; i--) {
-				var post = posts[i],
-					text = post.get("text"),
-					name = post.get("name");
-				$('<li>').addClass('post-item').
-					text(name + ": " + text).
-					prependTo('.posts').
-					data("parseObject", post);
+	try {
+		query.find({
+			success: function (posts) {
+				for (var i=posts.length-1; i>=0; i--) {
+					var post = posts[i],
+						text = post.get("text"),
+						name = post.get("name");
+					$('<li>').addClass('post-item').
+						text(name + ": " + text).
+						prependTo('.posts').
+						data("parseObject", post);
+				}
 			}
-		}
-	})
+		});
+	} catch (e) {
+		alert('This website is not usable in private browsing mode.');
+	}
 
 	$('#navicon').on("click", "a", function(e) {
 			e.preventDefault();
