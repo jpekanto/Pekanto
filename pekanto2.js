@@ -43,11 +43,12 @@ $(document).ready(function() {
 	$('#navicon').on("click", "a", function(e) {
 		e.preventDefault();
 		$menu.toggle("slide");
-		if ($chat.height() !== 0) {
+		if ($chat.css("display") !== "none") {
 			var logOut = confirm("Are you sure you want to log out and exit chatroom?");
-			if(logOut) {
+			if (logOut) {
 				Parse.User.logOut();
 				resetForm();
+				$('#posts').empty();
 				$chat.slideUp();
 				alert("You have successfully logged out. Good bye!");
 			}
@@ -88,7 +89,7 @@ $(document).ready(function() {
 		var userName = $('#name-text').val(),
 			userPass = $('#password-text').val();
 
-		if (userName === 0 || userPass === 0) {
+		if (userName.length === 0 || userPass.length === 0) {
 			$('#sign-in').addClass('disabled');
 			alert("Both Username and Password are required.");
 			resetForm();
